@@ -82,7 +82,7 @@ main {
   background-image: url("../assets/images/background.png");
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   color: #F2F2F2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,7 +118,6 @@ main .container h2 {
 section {
   min-height: 800px;
   position: relative;
-  width: 100vw;
 }
 
 section .container {
@@ -157,18 +156,33 @@ section#app .container img {
 section#drone {
   background-color: #151F38;
   color: #F2F2F2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 360px 1fr;
+      grid-template-columns: 360px 1fr;
+  gap: 5%;
+  place-content: center;
+  padding: 0 240px;
 }
 
-section#drone .container {
-  padding-top: 250px;
+section#drone img {
+  width: 100%;
 }
 
-section#drone .container img {
-  width: 40%;
-}
-
-section#drone .container div {
+section#drone div {
   text-align: right;
+}
+
+@media (max-width: 1400px) {
+  section#drone {
+    padding: 0 140px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section#drone {
+    padding: 0 80px;
+  }
 }
 
 section#services {
@@ -190,14 +204,18 @@ section#services .flex div {
   place-items: center;
 }
 
+section#services .flex div img {
+  margin-top: 2em;
+}
+
 section#contact {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #151F38;
   color: #F2F2F2;
+  overflow: auto;
 }
 
 section#contact .container {
-  height: 80vh;
   padding: 10vh 0;
 }
 
@@ -265,9 +283,7 @@ section#contact .container form button {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  bottom: -100px;
+  margin-right: auto;
 }
 
 section#contact .container form button:hover {
