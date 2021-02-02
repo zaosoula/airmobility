@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -41,6 +41,7 @@ p {
 
 nav {
   width: 100vw;
+  overflow: scroll;
   height: 50px;
   margin-bottom: 10vh;
   position: fixed;
@@ -56,6 +57,7 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: auto;
 }
 
 nav ul li {
@@ -174,6 +176,7 @@ section#app .container img {
 
 @media (max-width: 1300px) {
   section#app .container {
+    padding-top: 10vh;
     padding-bottom: 100px;
     padding-left: 0;
     padding-right: 0;
@@ -242,10 +245,21 @@ section#services .flex div {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
 section#services .flex div img {
   margin-top: 2em;
+}
+
+@media (max-width: 700px) {
+  section#services .flex {
+    display: -ms-grid;
+    display: grid;
+    gap: 3em;
+    place-content: center;
+    text-align: center;
+  }
 }
 
 section#contact {
@@ -309,6 +323,12 @@ section#contact .container form .input textarea:focus {
 section#contact .container form .input input {
   width: 50%;
   height: 50px;
+}
+
+@media (max-width: 850px) {
+  section#contact .container form .input input {
+    width: 100%;
+  }
 }
 
 section#contact .container form .input textarea {

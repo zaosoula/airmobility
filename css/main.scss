@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     justify-self: center;
 }
@@ -37,6 +37,7 @@ p {
 
 nav {
     width: 100vw;
+    overflow: scroll;
     height: 50px;
     margin-bottom: 10vh;
     position: fixed;
@@ -47,6 +48,7 @@ nav {
         list-style: none;
         display: flex;
         justify-content: center;
+        width: auto;;
 
         li {
             line-height: 50px;
@@ -153,6 +155,8 @@ section#app {
 
     @media (max-width: 1300px) {
         .container {
+            padding-top: 10vh;
+
             padding-bottom: 100px;
             padding-left: 0;
             padding-right: 0;
@@ -215,10 +219,20 @@ section#services {
         div {
             display: grid;
             place-items: center;
+            text-align: center;
 
             img {
                 margin-top: 2em
             }
+        }
+    }
+
+    @media (max-width: 700px) {
+        .flex {
+            display: grid;
+            gap: 3em;
+            place-content: center;
+            text-align: center;
         }
     }
 }
@@ -272,6 +286,10 @@ section#contact {
                 input {
                     width: 50%;
                     height: 50px;
+
+                    @media (max-width: 850px) {
+                        width: 100%;
+                    }
                 }
 
                 textarea {
