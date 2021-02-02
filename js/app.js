@@ -1,6 +1,9 @@
-let submit = document.getElementById('submit');
+document.addEventListener('DOMContentLoaded', function() {
 
-submit.addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Formulaire en cours de développement');
-});
+  let form = document.querySelector('#contactform');
+
+  setTimeout(function() {
+    form.action = "mailto:alice.marty@ynov.com";
+  },1000);
+  
+})

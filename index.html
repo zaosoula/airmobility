@@ -66,7 +66,6 @@
     </section>
 
     <section id="services">
-
         <div class="container">
             <div class="flex">
                 <div>
@@ -82,9 +81,7 @@
                     <img src="./assets/svg/drugs.svg" alt="drugs">
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <section id="contact">
@@ -92,23 +89,25 @@
         <div class="container">
             <h2>CONTACT</h2>
             <p>Une remarque ? Une suggestion ? N'hésitez pas à nous écrire !</p>
-            <form action="">
+            <form id="contactform" action="" method="get" enctype="text/plain">
                 <div class="input">
                     <label>Votre nom</label>
-                    <input type="text">
+                    <input type="text" name="name">
                 </div>
                 <div class="input">
                     <label>Votre email</label>
-                    <input type="text">
+                    <input type="text" name="email">
                 </div>
                 <div class="input">
                     <label>Sujet</label>
-                    <input type="text">
+                    <input type="text" name="subject">
                 </div>
                 <div class="input">
                     <label>Votre message</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea cols="30" rows="10" name="body"></textarea>
                 </div>
+
+                <input type="hidden" name="cc" value="zao.soula@ynov.com"> 
                 <button id="submit" type="submit" class="btn">Envoyer</button>
             </form>
         </div>
