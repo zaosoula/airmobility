@@ -65,6 +65,11 @@ nav {
                 &:hover {
                     opacity: 1;
                 }
+
+                &.active {
+                    font-weight: bold;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -96,6 +101,18 @@ main {
             font-style: italic;
         }
 
+    }
+
+    @media (max-width: 1400px) {
+        .container {
+            align-self: center;
+            width: auto;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+            }
+        }
     }
 }
 
@@ -131,6 +148,30 @@ section#app {
             position: absolute;
             bottom: 0;
             right: 0;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .container {
+            padding-bottom: 100px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .flex {
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            div {
+                width: 100vw;
+                padding: 0 5vw;
+                margin-bottom: 560px;
+            }
+
+            img {
+                position: absolute;
+            }
         }
     }
 }
@@ -186,10 +227,13 @@ section#contact {
     min-height: 100vh;
     background-color: #151F38;
     color: #F2F2F2;
-    overflow: auto;
+    overflow: visible;
+    padding-bottom: 10vh;
+    width: 100vw;
 
     .container {
-        padding: 10vh 0;
+        padding: 10vh 5%;
+        width: 100%;
 
         h2 {
             margin-bottom: 30px;
@@ -211,29 +255,27 @@ section#contact {
                     margin-bottom: 10px;
                 }
 
-                input {
-                    width: 600px;
-                    height: 50px;
+                input,
+                textarea {
                     background-color: #1E2B4D;
+                    border-radius: 15px;
+                    background-color: #1E2B4D;
+                    color: #F2F2F2;
                     border: none;
                     padding: 30px;
-                    color: #F2F2F2;
 
                     &:focus {
                         outline: none;
                     }
                 }
 
-                textarea {
-                    width: 1200px;
-                    background-color: #1E2B4D;
-                    border: none;
-                    padding: 30px;
-                    color: #F2F2F2;
+                input {
+                    width: 50%;
+                    height: 50px;
+                }
 
-                    &:focus {
-                        outline: none;
-                    }
+                textarea {
+                    width: 100%;
                 }
             }
 
@@ -248,6 +290,8 @@ section#contact {
                 font-weight: bold;
                 cursor: pointer;
                 margin-right: auto;
+                padding: 1em 2.3em;
+                margin-bottom: 3em;
 
                 &:hover {
                     background-color: #1c7ec0;

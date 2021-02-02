@@ -8,6 +8,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  background-color: #151F38;
 }
 
 .container {
@@ -78,6 +79,11 @@ nav ul li a:hover {
   opacity: 1;
 }
 
+nav ul li a.active {
+  font-weight: bold;
+  opacity: 1;
+}
+
 main {
   background-image: url("../assets/images/background.png");
   background-size: cover;
@@ -113,6 +119,19 @@ main .container h2 {
   font-size: 24px;
   font-weight: normal;
   font-style: italic;
+}
+
+@media (max-width: 1400px) {
+  main .container {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: auto;
+    text-align: center;
+  }
+  main .container img {
+    margin: 0 auto;
+  }
 }
 
 section {
@@ -151,6 +170,27 @@ section#app .container img {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 1300px) {
+  section#app .container {
+    padding-bottom: 100px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section#app .container .flex {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section#app .container div {
+    width: 100vw;
+    padding: 0 5vw;
+    margin-bottom: 560px;
+  }
+  section#app .container img {
+    position: absolute;
+  }
 }
 
 section#drone {
@@ -212,11 +252,14 @@ section#contact {
   min-height: 100vh;
   background-color: #151F38;
   color: #F2F2F2;
-  overflow: auto;
+  overflow: visible;
+  padding-bottom: 10vh;
+  width: 100vw;
 }
 
 section#contact .container {
-  padding: 10vh 0;
+  padding: 10vh 5%;
+  width: 100%;
 }
 
 section#contact .container h2 {
@@ -248,29 +291,28 @@ section#contact .container form .input label {
   margin-bottom: 10px;
 }
 
-section#contact .container form .input input {
-  width: 600px;
-  height: 50px;
+section#contact .container form .input input,
+section#contact .container form .input textarea {
   background-color: #1E2B4D;
+  border-radius: 15px;
+  background-color: #1E2B4D;
+  color: #F2F2F2;
   border: none;
   padding: 30px;
-  color: #F2F2F2;
 }
 
-section#contact .container form .input input:focus {
+section#contact .container form .input input:focus,
+section#contact .container form .input textarea:focus {
   outline: none;
+}
+
+section#contact .container form .input input {
+  width: 50%;
+  height: 50px;
 }
 
 section#contact .container form .input textarea {
-  width: 1200px;
-  background-color: #1E2B4D;
-  border: none;
-  padding: 30px;
-  color: #F2F2F2;
-}
-
-section#contact .container form .input textarea:focus {
-  outline: none;
+  width: 100%;
 }
 
 section#contact .container form button {
@@ -284,6 +326,8 @@ section#contact .container form button {
   font-weight: bold;
   cursor: pointer;
   margin-right: auto;
+  padding: 1em 2.3em;
+  margin-bottom: 3em;
 }
 
 section#contact .container form button:hover {
