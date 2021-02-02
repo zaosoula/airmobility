@@ -13,6 +13,8 @@ body {
 .container {
   width: 1200px;
   margin: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 h1 {
@@ -50,12 +52,17 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav ul li {
   line-height: 50px;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 2.5em;
 }
 
 nav ul li a {
@@ -77,11 +84,13 @@ main {
   width: 100vw;
   height: 100vh;
   color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .container {
-  padding-top: 20vh;
-  height: 60vh;
+  min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,10 +101,11 @@ main .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  justify-self: center;
 }
 
 main .container img {
-  width: 500px;
+  width: 40vh;
 }
 
 main .container h2 {
@@ -106,7 +116,7 @@ main .container h2 {
 }
 
 section {
-  height: 800px;
+  min-height: 800px;
   position: relative;
 }
 
@@ -121,7 +131,7 @@ section .container .flex {
 }
 
 section .container .flex div {
-  width: 60%;
+  width: 70%;
 }
 
 section .container .flex div h2 {
@@ -146,24 +156,29 @@ section#app .container img {
 section#drone {
   background-color: #151F38;
   color: #F2F2F2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
+  gap: 5%;
+  place-content: center;
+  padding: 0 240px;
 }
 
-section#drone .container {
-  padding-top: 350px;
+section#drone img {
+  width: 100%;
 }
 
-section#drone .container img {
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
-}
-
-section#drone .container div {
-  text-align: end;
+section#drone div {
+  text-align: right;
 }
 
 section#services {
-  height: 400px;
+  min-height: 400px;
   background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 section#services .flex {
@@ -175,93 +190,5 @@ section#services .flex div {
   display: -ms-grid;
   display: grid;
   place-items: center;
-}
-
-section#contact {
-  height: 100vh;
-  background-color: #151F38;
-  color: #F2F2F2;
-}
-
-section#contact .container {
-  height: 80vh;
-  padding: 10vh 0;
-}
-
-section#contact .container h2 {
-  margin-bottom: 30px;
-}
-
-section#contact .container form {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 60vh;
-  margin-top: 100px;
-}
-
-section#contact .container form .input {
-  margin: 15px 0;
-}
-
-section#contact .container form .input label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-section#contact .container form .input input {
-  width: 600px;
-  height: 50px;
-  background-color: #1E2B4D;
-  border: none;
-  padding: 30px;
-  color: #F2F2F2;
-}
-
-section#contact .container form .input input:focus {
-  outline: none;
-}
-
-section#contact .container form .input textarea {
-  width: 1200px;
-  background-color: #1E2B4D;
-  border: none;
-  padding: 30px;
-  color: #F2F2F2;
-}
-
-section#contact .container form .input textarea:focus {
-  outline: none;
-}
-
-section#contact .container form button {
-  width: 150px;
-  height: 50px;
-  color: #F2F2F2;
-  background-color: #1B78B5;
-  border-radius: 10px;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  bottom: -100px;
-}
-
-section#contact .container form button:hover {
-  background-color: #1c7ec0;
-}
-
-section#contact .container form button:focus {
-  outline: none;
 }
 /*# sourceMappingURL=main.css.map */
