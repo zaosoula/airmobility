@@ -101,6 +101,7 @@ main {
 section {
     min-height: 800px;
     position: relative;
+    width: 100vw;
 
     .container {
         height: 100%;
@@ -137,18 +138,17 @@ section#app {
 section#drone {
     background-color: #151F38;
     color: #F2F2F2;
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    gap: 5%;
-    place-content: center;
-    padding: 0 240px;
 
-    img {
-        width: 100%;
-    }
+    .container {
+        padding-top: 250px;
 
-    div {
-        text-align: right;
+        img {
+            width: 40%;
+        }
+
+        div {
+            text-align: right;
+        }
     }
 }
 
@@ -168,83 +168,83 @@ section#services {
     }
 }
 
-// section#contact {
-//     height: 100vh;
-//     background-color: #151F38;
-//     color: #F2F2F2;
+section#contact {
+    height: 100vh;
+    background-color: #151F38;
+    color: #F2F2F2;
 
-//     .container {
-//         height: 80vh;
-//         padding: 10vh 0;
+    .container {
+        height: 80vh;
+        padding: 10vh 0;
 
-//         h2 {
-//             margin-bottom: 30px;
-//         }
+        h2 {
+            margin-bottom: 30px;
+        }
 
-//         form {
-//             position: relative;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: space-between;
-//             height: 60vh;
-//             margin-top: 100px;
+        form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 60vh;
+            margin-top: 100px;
 
-//             .input {
-//                 margin: 15px 0;
+            .input {
+                margin: 15px 0;
 
-//                 label {
-//                     display: block;
-//                     margin-bottom: 10px;
-//                 }
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
 
-//                 input {
-//                     width: 600px;
-//                     height: 50px;
-//                     background-color: #1E2B4D;
-//                     border: none;
-//                     padding: 30px;
-//                     color: #F2F2F2;
+                input {
+                    width: 600px;
+                    height: 50px;
+                    background-color: #1E2B4D;
+                    border: none;
+                    padding: 30px;
+                    color: #F2F2F2;
 
-//                     &:focus {
-//                         outline: none;
-//                     }
-//                 }
+                    &:focus {
+                        outline: none;
+                    }
+                }
 
-//                 textarea {
-//                     width: 1200px;
-//                     background-color: #1E2B4D;
-//                     border: none;
-//                     padding: 30px;
-//                     color: #F2F2F2;
+                textarea {
+                    width: 1200px;
+                    background-color: #1E2B4D;
+                    border: none;
+                    padding: 30px;
+                    color: #F2F2F2;
 
-//                     &:focus {
-//                         outline: none;
-//                     }
-//                 }
-//             }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
 
-//             button {
-//                 width: 150px;
-//                 height: 50px;
-//                 color: #F2F2F2;
-//                 background-color: #1B78B5;
-//                 border-radius: 10px;
-//                 border: none;
-//                 font-size: 18px;
-//                 font-weight: bold;
-//                 cursor: pointer;
-//                 position: absolute;
-//                 right: 0;
-//                 bottom: -100px;
+            button {
+                width: 150px;
+                height: 50px;
+                color: #F2F2F2;
+                background-color: #1B78B5;
+                border-radius: 10px;
+                border: none;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                bottom: -100px;
 
-//                 &:hover {
-//                     background-color: #1c7ec0;
-//                 }
+                &:hover {
+                    background-color: #1c7ec0;
+                }
 
-//                 &:focus {
-//                     outline: none;
-//                 }
-//             }
-//         }
-//     }
-// }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
