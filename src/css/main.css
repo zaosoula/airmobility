@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 72px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 29px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav {
+  width: 100vw;
+  height: 50px;
+  margin-bottom: 10vh;
+  position: fixed;
+  z-index: 10;
+  background-color: #0B0F21;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul li {
+  line-height: 50px;
+}
+
+nav ul li a {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+main {
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #F2F2F2;
+}
+
+main .container {
+  padding-top: 20vh;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container img {
+  width: 500px;
+}
+
+main .container h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+section {
+  height: 800px;
+  position: relative;
+}
+
+section .container {
+  height: 100%;
+}
+
+section .container .flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .container .flex div {
+  width: 60%;
+}
+
+section .container .flex div h2 {
+  margin-bottom: 30px;
+}
+
+section#app {
+  background-color: #F2F2F2;
+  color: #151F38;
+}
+
+section#app .container {
+  padding-top: 350px;
+}
+
+section#app .container img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+section#drone {
+  background-color: #151F38;
+  color: #F2F2F2;
+}
+
+section#drone .container {
+  padding-top: 350px;
+}
+
+section#drone .container img {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+section#drone .container div {
+  text-align: end;
+}
+
+section#services {
+  height: 400px;
+  background-color: #F2F2F2;
+}
+
+section#services .flex {
+  height: 100%;
+  padding: 100px 0px;
+}
+
+section#services .flex div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+section#contact {
+  height: 100vh;
+  background-color: #151F38;
+  color: #F2F2F2;
+}
+
+section#contact .container {
+  height: 80vh;
+  padding: 10vh 0;
+}
+
+section#contact .container h2 {
+  margin-bottom: 30px;
+}
+
+section#contact .container form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60vh;
+  margin-top: 100px;
+}
+
+section#contact .container form .input {
+  margin: 15px 0;
+}
+
+section#contact .container form .input label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+section#contact .container form .input input {
+  width: 600px;
+  height: 50px;
+  background-color: #1E2B4D;
+  border: none;
+  padding: 30px;
+  color: #F2F2F2;
+}
+
+section#contact .container form .input input:focus {
+  outline: none;
+}
+
+section#contact .container form .input textarea {
+  width: 1200px;
+  background-color: #1E2B4D;
+  border: none;
+  padding: 30px;
+  color: #F2F2F2;
+}
+
+section#contact .container form .input textarea:focus {
+  outline: none;
+}
+
+section#contact .container form button {
+  width: 150px;
+  height: 50px;
+  color: #F2F2F2;
+  background-color: #1B78B5;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+}
+
+section#contact .container form button:hover {
+  background-color: #1c7ec0;
+}
+
+section#contact .container form button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=main.css.map */

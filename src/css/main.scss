@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 72px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 29px;
+}
+
+.flex {
+    display: flex;    
+}
+
+nav {
+    width: 100vw;
+    height: 50px;
+    margin-bottom: 10vh;
+    position: fixed;
+    z-index: 10;
+    background-color: #0B0F21;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            line-height: 50px;
+
+            a {
+                font-size: 22px;
+                color: white;
+                text-decoration: none;
+                opacity: 0.8;
+                transition: opacity 0.2s ease-in-out;
+
+                &:hover {
+                opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-image: url('../assets/images/background.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    color: #F2F2F2;
+
+    .container {
+        padding-top: 20vh;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+            width: 500px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: normal;
+            font-style: italic;
+        }
+    
+    }
+}
+
+section {
+    height: 800px; 
+    position: relative;
+
+    .container {
+        height: 100%;
+
+        .flex {
+            justify-content: space-between;
+
+            div {
+                width: 60%;
+
+                h2 {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+section#app {
+    background-color: #F2F2F2;
+    color: #151F38;
+
+    .container {
+        padding-top: 350px;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }   
+}
+
+section#drone {
+    background-color: #151F38;
+    color: #F2F2F2;
+
+    .container {
+        padding-top: 350px;
+        
+        img {
+            transform: translateY(-100px);
+        }
+
+        div {
+            text-align: end;
+        }
+    }
+}
+
+section#services {
+    height: 400px;
+    background-color: #F2F2F2;
+
+    .flex {
+        height: 100%;
+        padding: 100px 0px;
+
+        div {
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+
+section#contact {
+    height: 100vh;
+    background-color: #151F38;
+    color: #F2F2F2;
+
+    .container {
+        height: 80vh;
+        padding: 10vh 0;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 60vh;
+            margin-top: 100px;
+
+            .input {
+                margin: 15px 0;
+
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                input {
+                    width: 600px;
+                    height: 50px;
+                    background-color: #1E2B4D;
+                    border: none;
+                    padding: 30px;
+                    color: #F2F2F2;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                
+                textarea {
+                    width: 1200px;
+                    background-color: #1E2B4D;
+                    border: none;
+                    padding: 30px;
+                    color: #F2F2F2;
+                    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            button {
+                width: 150px;
+                height: 50px;
+                color: #F2F2F2;
+                background-color: #1B78B5;
+                border-radius: 10px;
+                border: none;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                bottom: -100px;
+
+                &:hover {
+                    background-color: #1c7ec0;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
